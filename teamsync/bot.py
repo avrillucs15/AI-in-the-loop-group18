@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 
 from teamsync import config
+from teamsync.db.connection import init_db
 
 EXTENSIONS: list[str] = []  # 第 5 輪加入 "teamsync.cogs.decide"
 
@@ -11,7 +12,7 @@ class TeamSyncBot(commands.Bot):
         super().__init__(command_prefix="!", intents=discord.Intents.default())
 
     async def setup_hook(self):
-        # 第 2 輪在這裡加入 await init_db(config.DB_PATH)
+        await init_db(config.DB_PATH)
         for ext in EXTENSIONS:
             await self.load_extension(ext)
         guild = discord.Object(id=config.GUILD_ID)

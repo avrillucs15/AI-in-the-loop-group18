@@ -28,7 +28,22 @@ class DecideCog(commands.Cog):
         message = await interaction.original_response()
         await decisions.set_message(decision.id, None, message.id)
 
-    # 第 6 輪把 /reveal 加在這裡
+    @app_commands.command(name="reveal", description="揭曉所有人的表態")
+    @app_commands.describe(decision_id="決定編號（# 後面的數字）")
+    async def reveal(self, interaction: discord.Interaction, decision_id: int):
+        # skeleton：原樣印出資料。TODO(A, PR 2)：限提議者、改狀態、換成 B 的 embed 與 C 的 AI 流程
+        decision = await decisions.get_decision(decision_id)
+        if decision is None:
+            await interaction.response.send_message("找不到這個決定。", ephemeral=True)
+            return
+        rows = await stances.get_stances(decision_id)
+        labels = {o.id: o.label for o in decision.options}
+        lines = [f"**決定 #{decision.id} 原始資料：{decision.question}**"]
+        lines += [f"<@{s.user_id}>｜{labels[s.option_id]}｜{s.stance.value}｜{s.reason or '-'}" for s in rows]
+        if not rows:
+            lines.append("（還沒有人表態）")
+        await interaction.response.send_message("\n".join(lines),
+                                                allowed_mentions=discord.AllowedMentions.none())
 
     @commands.Cog.listener()
     async def on_interaction(self, interaction: discord.Interaction):

@@ -18,11 +18,3 @@
 ## 2026-11-23 技術選型：Python + discord.py + SQLite
 **What:** 選擇：Python 3.11、discord.py 2.4、SQLite（aiosqlite）
 **Why:** 相較 Node.js + discord.js 等其他工具，組員們更加熟悉
-
-## 2026-11-23 資料格式定案（walking skeleton）
-**What:** 5 張資料表（decisions、options、stances、ai_summaries、conclusions）與 models.py；立場分 support／reserved／oppose 三種
-**Why:** 必要的文件
-
-## 2026-11-23 保留意見預設匿名
-**What:** 表態預設匿名，表態時可改為具名
-**Why:** P2 訪談顯示有社交壓力時不敢說

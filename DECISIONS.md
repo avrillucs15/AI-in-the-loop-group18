@@ -14,3 +14,7 @@
 **What:** 把專案方向從籠統的「意見不合」收斂成一個完整、具體的問題與設計（詳見Group18_CP1.md）
 
 **Why:** 原本問題過於籠統，並難以產出具體設計與衡量計劃。
+
+## 2026-11-23 技術選型：Python + discord.py + SQLite
+**What:** 選擇：Python 3.11、discord.py 2.4、SQLite（aiosqlite）
+**Why:** 相較 Node.js + discord.js 等其他工具，組員們更加熟悉

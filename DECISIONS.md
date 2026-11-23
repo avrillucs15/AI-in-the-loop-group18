@@ -37,3 +37,6 @@
 ## 2026-11-23 按鈕處理方式
 **What:** 按鈕 custom_id 寫成 stance:<編號>，由 cog 監聽所有按鈕事件；之後每種按鈕都用自己的前綴
 **Why:** 用 View 物件 callback 的按鈕在 bot 重啟後就失效，而決定可能開好幾天；把決定編號寫進 custom_id、由 cog 統一處理，重啟後舊按鈕仍可用，也不用替每個決定各註冊一個 View。
+
+## 2026-11-23 更換code steward
+從stue1202換成avrillucs15

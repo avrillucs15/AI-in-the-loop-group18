@@ -4,7 +4,7 @@ from discord.ext import commands
 from teamsync import config
 from teamsync.db.connection import init_db
 
-EXTENSIONS: list[str] = []  # 第 5 輪加入 "teamsync.cogs.decide"
+EXTENSIONS: list[str] = ["teamsync.cogs.decide"]
 
 
 class TeamSyncBot(commands.Bot):

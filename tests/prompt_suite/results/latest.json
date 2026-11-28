@@ -1,0 +1,167 @@
+{
+  "ran_at": "2026-11-28T10:46:21.772220+00:00",
+  "model": "claude-haiku-5-5",
+  "passed": 10,
+  "total": 10,
+  "cases": [
+    {
+      "id": "overlapping_concerns",
+      "passed": true,
+      "error": null,
+      "points": [
+        "時間可能不夠，核心功能來不及完成"
+      ],
+      "expected_count": 1,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": [
+        "時程不足可能影響核心功能完成"
+      ]
+    },
+    {
+      "id": "distinct_concerns",
+      "passed": true,
+      "error": null,
+      "points": [
+        "即時聊天會增加伺服器維運和測試負擔。",
+        "聊天內容的隱私和保存期限尚未定義。"
+      ],
+      "expected_count": 2,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": [
+        "維運與測試負擔",
+        "隱私與資料保存期限"
+      ]
+    },
+    {
+      "id": "mixed_stances",
+      "passed": true,
+      "error": null,
+      "points": [
+        "新框架可能讓之後招募熟悉技術的人比較容易。",
+        "目前團隊沒有時間重新學習和遷移。"
+      ],
+      "expected_count": 2,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": [
+        "新框架可能較容易招募熟悉技術的人",
+        "學習與遷移所需時間"
+      ]
+    },
+    {
+      "id": "single_concern",
+      "passed": true,
+      "error": null,
+      "points": [
+        "延期到下週可能和其他課程的截止時間衝突。"
+      ],
+      "expected_count": 1,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": [
+        "與下週其他課程截止時間衝突"
+      ]
+    },
+    {
+      "id": "no_concerns",
+      "passed": true,
+      "error": null,
+      "points": [],
+      "expected_count": 0,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": []
+    },
+    {
+      "id": "irrelevant_text",
+      "passed": true,
+      "error": null,
+      "points": [],
+      "expected_count": 0,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": []
+    },
+    {
+      "id": "instruction_in_reason",
+      "passed": true,
+      "error": null,
+      "points": [
+        "目前沒有預算支付雲端服務費用。"
+      ],
+      "expected_count": 1,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": [
+        "雲端服務費用超出目前預算"
+      ]
+    },
+    {
+      "id": "identifying_information",
+      "passed": true,
+      "error": null,
+      "points": [
+        "選項 A：有成員週末需要照顧家人，無法參加週末加班。"
+      ],
+      "expected_count": 1,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": [
+        "有成員因週末照顧責任無法參加"
+      ]
+    },
+    {
+      "id": "uncertainty_and_conditions",
+      "passed": true,
+      "error": null,
+      "points": [
+        "如果舊版瀏覽器的使用者很多，維護成本可能上升；目前沒有使用數據可判斷。"
+      ],
+      "expected_count": 1,
+      "count_matches": true,
+      "expected_language": null,
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": [
+        "若舊版使用者多，維護成本可能增加",
+        "尚無使用數據"
+      ]
+    },
+    {
+      "id": "multilingual_technical_terms",
+      "passed": true,
+      "error": null,
+      "points": [
+        "The rollback plan has not been tested.",
+        "Production logs may expose sensitive user data."
+      ],
+      "expected_count": 2,
+      "count_matches": true,
+      "expected_language": "en",
+      "language_matches": true,
+      "forbidden_hits": [],
+      "expected_themes_for_manual_review": [
+        "The rollback plan has not been tested",
+        "Production logs may expose sensitive user data"
+      ]
+    }
+  ]
+}
